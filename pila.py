@@ -17,7 +17,22 @@ class Pila(object):
             self.contenido.append(arg)
         
     def pop(self):
-        pass
+        try:
+            return self.contenido.pop()
+        except IndexError:
+            raise Exception("La pila está vacía")
 
+    def len(self):
+        "Devuelve la cantidad de objetos en la pila"
+        return len(self.contenido)
+
+    def is_empty(self):
+        "Indica si la pila está vacía"
+        if not self.contenido:
+            return "La pila está vacía"
+        else:
+            return "Hay objetos en la pila"
 
         
+            
+
